@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This script is splited into two parts: 
+## makeCacheMatrix will create a list of function, as well as provide memory for matrix and inversematrix
+##cacheSolve will check if inverse exist, then print if it exist, else create inverse.
 
-## Write a short comment describing this function
+## makeCacheMatrix create 4 functions. Set will set memory on a cacheMatrix, get will show the memorized matrix
+## setinv will set inverse of matrix, getinv will return the inverse of matrix. inverse is memorized in m
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cachesolve takes in an object of "makeCacheMatrix". it then try to check if the inverse memory "m" in "makeCacheMatrix" is null or not
+## if it is, generate an inverse and memorize in makeCacheMatrix object
+## else just print out the inverse from memory.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
